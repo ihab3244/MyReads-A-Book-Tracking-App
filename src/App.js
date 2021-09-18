@@ -65,9 +65,13 @@ class BooksApp extends React.Component {
 
     let addedBooks = this.state.books.filter( book => book.id !== addedbook.id )
     this.setState({ books: this.state.books.filter( book => book.id !== addedbook.id ) })
+    this.setState({ books: addedBooks })
    	this.setState({ searchedBooks: [] })
+    this.componentDidMount()
   }
 
+  
+  
   render() {
     return (
       <div className="app">
